@@ -1,0 +1,55 @@
+<html>
+<body>
+
+<h1 id="heading">Creating </h1>
+
+<p id="demo">PoR</p>
+<button onclick = "addItem()">Click</button>
+<ul id = "ul">
+	<li >List 1</li>
+	<li >List 2</li>
+</ul>
+
+
+<script type ="text/javascript">
+
+let h1= document.getElementById('heading');
+h1.onclick = function()
+{
+	h1.innerHTML = "HELLO POR";
+}
+
+setInterval(function(){
+	h1.innerHTML = "heading";
+
+} ,800);
+setInterval(function(){
+	h1.innerHTML = "heading2";
+
+} ,1000);
+//var heading = document.getElementById('heading');
+//console.log(heading);
+//heading.setAttribute('align','center');
+//console.log(demo.getAttribute('align'))
+//heading.innerHTML = "HELLO";
+
+
+
+var li = document.getElementsByTagName('li');
+ for(let i in li)
+ 	li[i].innerHTML = "newlist" + (Number(i)+1);
+
+var ul = document.getElementById('ul');
+function addItem()
+{
+    let  newLi = document.createElement('Li');
+    newLi.innerHTML = "add new li"
+    ul.appendChild(newLi)
+}
+
+
+   
+</script>
+
+</body>
+</html>
